@@ -8,5 +8,5 @@ if (isset($_GET["spaces"])) {
     $state = intval($_GET["state"]);
     $api->updateSlot($slot, $state);
 } else {
-    header("Location: dashboard.html");
+    header("Location: dashboard.php");
 }

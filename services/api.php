@@ -42,4 +42,17 @@ class API
             $this->db->closeConnection();
         }
     }
+
+    public function getSlot($slot)
+    {
+        $sql = "SELECT * from spaces where slot=$slot";
+        $result = $this->db->conn->query($sql);
+        $row = mysqli_fetch_array($result);
+        $state = $row["state"];
+        if ($state == "0") {
+            return "false";
+        } else {
+            return "true";
+        }
+    }
 }
