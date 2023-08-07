@@ -30,7 +30,7 @@ class API
             } else {
                 echo "Error: " . $sql . "<br>" . $this->db->conn->error;
             }
-            $this->db->closeConnection();
+            //            $this->db->closeConnection();
         } else {
             $sql = "INSERT INTO spaces (slot,state) VALUES ('$slot', '$state')";
             $result = $this->db->conn->query($sql);
@@ -39,7 +39,7 @@ class API
             } else {
                 echo "Error: " . $sql . "<br>" . $this->db->conn->error;
             }
-            $this->db->closeConnection();
+            //          $this->db->closeConnection();
         }
     }
 
